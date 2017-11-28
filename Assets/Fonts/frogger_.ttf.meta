@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 81fa40a313118274e9d8b6471b8d1716
+timeCreated: 1511832409
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Frogger
+  fontNames:
+  - Frogger
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
