@@ -81,17 +81,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BackGround.cs" />
-    <Compile Include="Assets\CarBehaviour.cs" />
-    <Compile Include="Assets\CarSpawner.cs" />
-    <Compile Include="Assets\FrogBehaviour.cs" />
-    <Compile Include="Assets\GameController.cs" />
-    <Compile Include="Assets\Goal.cs" />
-    <Compile Include="Assets\Limits.cs" />
-    <Compile Include="Assets\Score.cs" />
-    <Compile Include="Assets\script.cs" />
-    <Compile Include="Assets\soundManager.cs" />
-    <Compile Include="Assets\titleController.cs" />
+    <Compile Include="Assets\Scripts\BackGround.cs" />
+    <Compile Include="Assets\Scripts\CarBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CarSpawner.cs" />
+    <Compile Include="Assets\Scripts\FrogBehaviour.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Goal.cs" />
+    <Compile Include="Assets\Scripts\Limits.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
+    <Compile Include="Assets\Scripts\script.cs" />
+    <Compile Include="Assets\Scripts\soundManager.cs" />
+    <Compile Include="Assets\Scripts\titleController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
