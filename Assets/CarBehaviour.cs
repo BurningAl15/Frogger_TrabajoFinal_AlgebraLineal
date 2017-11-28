@@ -101,9 +101,16 @@ public class CarBehaviour : MonoBehaviour {
         {
             //SceneManager.LoadScene(name);
             frog.anim.SetTrigger("Die");
+            frog.alive = false;
+            frog.tag = "Enemy";
             soundManager.instance.Death();
-            StartCoroutine(GameController.FindObjectOfType<GameController>().SceneM(dur));
+            
             goal.counter = 0;
+        }
+
+        if(!frog.alive)
+        {
+            StartCoroutine(GameController.FindObjectOfType<GameController>().SceneM(dur));
         }
     }
 

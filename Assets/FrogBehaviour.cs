@@ -6,16 +6,21 @@ public class FrogBehaviour : MonoBehaviour {
 
     Rigidbody2D rgb;
     public Animator anim;
+    public bool alive;
 	// Use this for initialization
 	void Start () {
         rgb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        alive = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Movement();
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(alive)
+        { 
+            Movement();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
