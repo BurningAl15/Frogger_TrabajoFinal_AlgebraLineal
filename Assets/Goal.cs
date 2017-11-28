@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Goal : MonoBehaviour {
     public GameObject points;
-    public int counter = 0;
-    //public int topCounter;
+    public int counter;
+    int currentCounter;
+    public int topCounter;
     FrogBehaviour player;
     Vector2 startingPos;
     public bool win;
@@ -21,13 +22,27 @@ public class Goal : MonoBehaviour {
         win = false;
         duration = 0.2f;
         startDuration = duration;
-
-
+        
+        counter = 0;
+        //topCounter = 200;
     }
 
     private void Update()
     {
-        points.GetComponent<Text>().text = "Points: " + counter;
+        counter = Score.instance.counter;
+        //points.GetComponent<Text>().text = "Points: " + counter;
+        points.GetComponent<Text>().text = "Points: " + Score.instance.counter;
+
+        //if (counter>0)
+        //{
+        //    currentCounter = counter;        
+        //}
+
+        //if (currentCounter >= topCounter)
+        //{
+        //    topCounter = currentCounter;
+        //}
+
         //if(win)
         //{ 
         //    duration -= Time.deltaTime;
@@ -41,16 +56,16 @@ public class Goal : MonoBehaviour {
         //    background.panel.SetActive(true);
         //    duration = startDuration;
         //}
-       
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player"))
         {
-           counter += 50;
-           player.transform.position= startingPos;
+            //counter += 50;
+            Score.instance.AddScore();
+            player.transform.position= startingPos;
            win = true;
         }
     }

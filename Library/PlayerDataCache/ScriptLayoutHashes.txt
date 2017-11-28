@@ -92,7 +92,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 5667fb372c2b292ccdec2a31aaac98fa UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 f9630141c8b209e9135a9476dd634f83 Assembly-CSharp.dll:.titleController
-daa0e0e35b1b7c030819dc6f2fc9ada0 Assembly-CSharp.dll:.Goal
+fd8a92406a67c65e7eadb483eda887ba Assembly-CSharp.dll:.Goal
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -140,3 +140,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 910ece990ba7c8657d3c10dc1720e1e7 Assembly-CSharp.dll:.CarSpawner
 e606bae38f9b58e270a305d18ad4dcf0 Assembly-CSharp.dll:.CarBehaviour
 48b12fff2d712d96928e2d65166f0f45 Assembly-CSharp.dll:.GameController
+ab4ef94a78819cc95d340c535952306b Assembly-CSharp.dll:.Score

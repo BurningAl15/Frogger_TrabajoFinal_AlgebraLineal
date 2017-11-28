@@ -13,14 +13,18 @@ public class GameController : MonoBehaviour {
     public Text texto;
     public Text texto2;
     public GameObject pressBtn;
+    int counter;
+    
     private void Start()
     {
         goal = FindObjectOfType<Goal>();
         pauseTab.SetActive(false);
         lose.SetActive(false);
-        
+
         pressBtn.SetActive(false);
-        texto.text = PlayerPrefs.GetInt("HigherScore", 0).ToString();
+
+        texto.text = PlayerPrefs.GetInt("HigherScore",0).ToString();
+        
     }
 
     private void Update()
@@ -50,6 +54,7 @@ public class GameController : MonoBehaviour {
         {
             lose.SetActive(true);
             pressBtn.SetActive(true);
+            
             yield return null;
         }
 
@@ -58,14 +63,15 @@ public class GameController : MonoBehaviour {
         {
             pressBtn.SetActive(false);
             lose.SetActive(true);
+
             if (goal.counter > PlayerPrefs.GetInt("HigherScore", 0))
             {
                 PlayerPrefs.SetInt("HigherScore", goal.counter);
             }
-            texto2.text ="El score más alto: " + PlayerPrefs.GetInt("HigherScore", goal.counter).ToString();
-            //Time.timeScale = 0;
-            
 
+            texto2.text ="El score más alto: " + PlayerPrefs.GetInt("HigherScore").ToString();
+            //Debug.Log("Damn");
+            //Time.timeScale = 0;
             
             yield return null;
         }
@@ -79,13 +85,6 @@ public class GameController : MonoBehaviour {
             yield return null;
 
         }
-
-        //for (float t = 0; t < duration; t += Time.deltaTime)
-        //{
-        //    //Time.timeScale = 1;
-            
-        //    yield return null;
-        //}
         
     }
 

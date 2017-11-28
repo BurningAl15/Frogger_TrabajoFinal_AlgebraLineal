@@ -29,17 +29,19 @@ public class CarBehaviour : MonoBehaviour {
         //speed= Random.RandomRange(4, 7);
         speed = 3;
         //lose.SetActive(false);
-        PlayerPrefs.GetInt("HigherScore",0);
+        //PlayerPrefs.GetInt("HigherScore",0);
 
         positionsY0 = new float[2] { -3.02f, 1.3f };
         positionsY1 = new float[2] {  -0.8f, 3.57f };
         positionsX = new float[2] { -10.82f, 8.91f };
+        //Izquierda a derecha
         if (tipo == 0)
         {
             dir = 1;
             actualPosY = positionsY0[Random.Range(0, positionsY0.Length)];
             actualPosX = positionsX[0];
         }
+        //Derecha a izquierda
         if (tipo==1)
         {
             dir = -1;

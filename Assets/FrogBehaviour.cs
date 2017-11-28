@@ -30,22 +30,26 @@ public class FrogBehaviour : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            rgb.MovePosition(rgb.position + Vector2.left);
+            Vector2 izquierda = new Vector2(-1, 0);
+            rgb.MovePosition(rgb.position + izquierda);
             soundManager.instance.Jump();
         }
         if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
-            rgb.MovePosition(rgb.position + Vector2.right);
+            Vector2 derecha = new Vector2(1, 0);
+            rgb.MovePosition(rgb.position + derecha);
             soundManager.instance.Jump();
         }
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-            rgb.MovePosition(rgb.position + Vector2.up);
+            Vector2 arriba = new Vector2(0, 1);
+            rgb.MovePosition(rgb.position + arriba);
             soundManager.instance.Jump();
         }
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
-            rgb.MovePosition(rgb.position + Vector2.down);
+            Vector2 abajo = new Vector2(0, -1);
+            rgb.MovePosition(rgb.position + abajo);
             soundManager.instance.Jump();
         }
         
@@ -53,7 +57,8 @@ public class FrogBehaviour : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        rgb.MovePosition(rgb.position + Vector2.zero);
+        Vector2 cero = new Vector2(0, 0);
+        rgb.MovePosition(rgb.position + cero);
     }
 
 }
